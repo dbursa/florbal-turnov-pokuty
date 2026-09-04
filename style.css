@@ -1,0 +1,442 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0 16px 40px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  background: #f4f5f7;
+  color: #1f2328;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background: #f4f5f7;
+  padding: 16px 0 10px;
+  z-index: 30;
+}
+
+h1 {
+  font-size: 20px;
+  margin: 0 0 2px;
+}
+
+.season {
+  margin: 0 0 12px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+button, .fileLabel {
+  cursor: pointer;
+  border: 1px solid #c8ccd1;
+  background: #fff;
+  border-radius: 6px;
+  padding: 7px 12px;
+  font-size: 13px;
+  color: #1f2328;
+}
+
+button:hover, .fileLabel:hover {
+  background: #eceef1;
+}
+
+button.dirty {
+  background: #b3261e;
+  border-color: #b3261e;
+  color: #fff;
+  font-weight: 600;
+}
+
+button.dirty:hover {
+  background: #93140d;
+}
+
+.fileStatus {
+  margin: 6px 0 0;
+  font-size: 12px;
+  color: #6b7280;
+  min-height: 15px;
+}
+
+.hint {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 8px;
+}
+
+.hint code {
+  background: #eceef1;
+  border-radius: 3px;
+  padding: 1px 4px;
+  font-size: 11px;
+}
+
+/* --- Price list --- */
+
+.priceList {
+  background: #fff;
+  border: 1px solid #d0d4d9;
+  border-radius: 6px;
+  margin-bottom: 14px;
+  padding: 4px 14px;
+}
+
+.priceList summary {
+  cursor: pointer;
+  font-weight: 600;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+#priceListContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 14px;
+  padding-bottom: 14px;
+}
+
+.priceGroup h3 {
+  font-size: 13px;
+  margin: 0 0 6px;
+  color: #b3261e;
+}
+
+.priceGroup ul {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #33383f;
+}
+
+/* --- Dialogs --- */
+
+dialog#addFineDialog, dialog#cellFineDialog {
+  border: none;
+  border-radius: 8px;
+  padding: 20px 22px;
+  width: min(520px, 92vw);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+dialog#addFineDialog::backdrop, dialog#cellFineDialog::backdrop {
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.cellFinesList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 25vh;
+  overflow-y: auto;
+  margin-bottom: 4px;
+}
+
+.cellFineRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f8f9fa;
+  border: 1px solid #e3e5e8;
+  border-radius: 6px;
+  padding: 6px 10px;
+}
+
+.cellFineLabel {
+  flex: 1;
+  font-size: 13px;
+}
+
+.cellFineAmount {
+  font-size: 13px;
+  font-weight: 600;
+  color: #b3261e;
+}
+
+.removeFineBtn {
+  border: none;
+  background: transparent;
+  color: #94989e;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.removeFineBtn:hover {
+  color: #b3261e;
+  background: #fbeceb;
+}
+
+.emptyHint {
+  font-size: 12px;
+  color: #8a8f98;
+  margin: 0 0 4px;
+}
+
+.dialogForm h2 {
+  margin: 0 0 4px;
+  font-size: 17px;
+}
+
+.dialogHint {
+  margin: 0 0 14px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.catalogList {
+  max-height: 45vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.catalogGroup h4 {
+  margin: 0 0 4px;
+  font-size: 12px;
+  color: #b3261e;
+}
+
+.catalogGroup .catalogItems {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.catalogItemBtn {
+  border: 1px solid #c8ccd1;
+  background: #f8f9fa;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.catalogItemBtn:hover {
+  background: #eaf1ff;
+  border-color: #4c8bf5;
+}
+
+.customLabel {
+  margin: 14px 0 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.customRow {
+  display: flex;
+  gap: 6px;
+}
+
+.customRow input[type="text"] {
+  flex: 1;
+}
+
+.customRow input[type="number"] {
+  width: 90px;
+}
+
+.customRow input {
+  border: 1px solid #c8ccd1;
+  border-radius: 6px;
+  padding: 7px 10px;
+  font-size: 13px;
+  font-family: inherit;
+}
+
+.dialogActions {
+  margin-top: 16px;
+  text-align: right;
+}
+
+.tableWrap {
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: calc(100vh - 130px);
+  border: 1px solid #d0d4d9;
+  border-radius: 6px;
+  background: #fff;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 13px;
+  min-width: 100%;
+}
+
+th, td {
+  border-bottom: 1px solid #e3e5e8;
+  border-right: 1px solid #e3e5e8;
+  padding: 0;
+  white-space: nowrap;
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+  background: #eef0f3;
+  z-index: 10;
+  font-weight: 600;
+  padding: 8px 10px;
+  text-align: center;
+}
+
+.nameCol {
+  position: sticky;
+  left: 0;
+  z-index: 5;
+  background: #eef0f3;
+  text-align: left;
+  min-width: 170px;
+  padding: 8px 12px !important;
+}
+
+thead th.cornerCell {
+  z-index: 20;
+}
+
+tbody .nameCol {
+  background: #f8f9fa;
+  font-weight: 500;
+  z-index: 6;
+}
+
+tbody tr:nth-child(even) .nameCol {
+  background: #f1f2f4;
+}
+
+.fineCol {
+  min-width: 130px;
+}
+
+thead th.trainingCol {
+  background: #e8f1fd;
+}
+
+thead th.matchCol {
+  background: #fdefe0;
+}
+
+th.monthStart, td.amountCell.monthStart {
+  border-left: 2px solid #9aa0a8;
+}
+
+.colHeaderInner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.colTitleInput {
+  outline: none;
+  border: none;
+  background: transparent;
+  min-width: 60px;
+  width: 100%;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: text;
+  border-radius: 4px;
+  padding: 4px 4px;
+  color: inherit;
+}
+
+.colTitleInput:focus {
+  background: #fff;
+  box-shadow: 0 0 0 2px #4c8bf5 inset;
+}
+
+.deleteColBtn {
+  border: none;
+  background: transparent;
+  color: #94989e;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.deleteColBtn:hover {
+  color: #b3261e;
+  background: #fbeceb;
+}
+
+.amountCell {
+  padding: 0;
+  min-width: 90px;
+}
+
+.cellBtn {
+  width: 100%;
+  height: 100%;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  font-size: 13px;
+  font-family: inherit;
+  color: #b0b4ba;
+  padding: 8px 10px;
+}
+
+.cellBtn:hover {
+  background: #eaf1ff;
+}
+
+.cellBtn.hasFine {
+  color: #b3261e;
+  font-weight: 600;
+}
+
+.rowTotal, .totalCol {
+  position: sticky;
+  right: 0;
+  background: #eef0f3;
+  font-weight: 600;
+  text-align: center;
+  padding: 8px 10px !important;
+  z-index: 4;
+}
+
+thead .totalCol, tfoot .totalCol {
+  z-index: 20;
+}
+
+.colSum {
+  text-align: center;
+  font-weight: 600;
+  padding: 8px 10px;
+  background: #f1f2f4;
+}
+
+tfoot th {
+  position: sticky;
+  bottom: 0;
+  background: #eef0f3;
+  z-index: 15;
+}
+
+.emptyState {
+  padding: 24px;
+  text-align: center;
+  color: #8a8f98;
+}

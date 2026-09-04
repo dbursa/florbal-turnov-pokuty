@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pokuty - Florbal Turnov</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Pokuty &ndash; Florbal Turnov</h1>
+  <p class="season">Sezóna 2026/2027</p>
+  <div class="toolbar">
+    <button id="addColumnBtn">+ Přidat pokutu</button>
+    <button id="linkFileBtn" hidden>🔗 Propojit data.js</button>
+    <button id="exportBtn">Uložit data.js</button>
+    <label class="fileLabel" id="importLabel">
+      Nahrát jiný soubor
+      <input type="file" id="importInput" accept=".js,.json,application/json,text/javascript" hidden>
+    </label>
+  </div>
+  <p id="fileStatus" class="fileStatus"></p>
+</header>
+
+<details class="priceList">
+  <summary>Ceník pokut 2026/2027</summary>
+  <div id="priceListContent"></div>
+</details>
+
+<main>
+  <div class="tableWrap">
+    <table id="finesTable">
+      <thead>
+        <tr id="headerRow">
+          <th class="nameCol cornerCell">Jméno</th>
+          <!-- fine columns injected here -->
+          <th class="totalCol">Celkem</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+        <!-- rows injected here -->
+      </tbody>
+      <tfoot>
+        <tr id="footerRow">
+          <th class="nameCol">Součet</th>
+          <!-- column sums injected here -->
+          <th class="totalCol" id="grandTotal">0 Kč</th>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</main>
+
+<p class="hint">Klikni na buňku pro přidání nebo odebrání pokuty z ceníku. Klikni na název sloupce pro úpravu, na &times; pro jeho smazání.</p>
+<p class="hint">Data žijí v souboru <code>data.js</code> vedle <code>index.html</code> v tomto repozitáři a při otevření se načtou automaticky. Spusť appku přes <code>start.sh</code> (ne dvojklikem na <code>index.html</code>) a klikni na &bdquo;Propojit data.js&ldquo; &ndash; pak se každá změna rovnou zapisuje do souboru na disku, bez stahování. (Funguje jen v Chrome/Edge/Chromium.) Po úpravách stačí <code>git commit</code>.</p>
+
+<dialog id="cellFineDialog">
+  <form method="dialog" class="dialogForm">
+    <h2 id="cellDialogTitle">Pokuty</h2>
+    <div id="cellFinesList" class="cellFinesList"></div>
+    <hr>
+    <p class="dialogHint">Přidat pokutu z ceníku:</p>
+    <div id="cellCatalogList" class="catalogList"></div>
+    <hr>
+    <p class="customLabel">Vlastní pokuta:</p>
+    <div class="customRow">
+      <input type="text" id="cellCustomLabel" placeholder="Název pokuty">
+      <input type="number" id="cellCustomAmount" placeholder="Kč" min="0">
+      <button type="button" id="cellCustomAddBtn">Přidat</button>
+    </div>
+    <div class="dialogActions">
+      <button type="submit" value="cancel">Zavřít</button>
+    </div>
+  </form>
+</dialog>
+
+<dialog id="addFineDialog">
+  <form method="dialog" class="dialogForm">
+    <h2>Přidat pokutu</h2>
+    <p class="dialogHint">Vyber pokutu z ceníku, nebo zadej vlastní.</p>
+    <div id="catalogList" class="catalogList"></div>
+    <hr>
+    <p class="customLabel">Vlastní pokuta:</p>
+    <div class="customRow">
+      <input type="text" id="customFineLabel" placeholder="Název pokuty">
+      <input type="number" id="customFineAmount" placeholder="Kč" min="0">
+      <button type="button" id="customFineAddBtn">Přidat</button>
+    </div>
+    <div class="dialogActions">
+      <button type="submit" value="cancel">Zavřít</button>
+    </div>
+  </form>
+</dialog>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
