@@ -17,7 +17,9 @@ window.SAVED_DATA = {
     "Špetlík Jan",
     "Šťastný Jan",
     "Bulušek Štěpán",
-    "Jiránek Tomáš"
+    "Jiránek Tomáš",
+    "Mlejnek Mikuláš",
+    "Šafář Ondřej"
   ],
   "fineCatalog": [
     {
@@ -715,6 +717,13 @@ window.SAVED_DATA = {
           "label": "První asistence v letošní sezóně",
           "amount": 20
         }
+      ],
+      "we-2026-09-05": [
+        {
+          "id": "e1788773102631353",
+          "label": "Vyloučení 2´",
+          "amount": 20
+        }
       ]
     },
     "Cvekl Štěpán": {
@@ -750,6 +759,13 @@ window.SAVED_DATA = {
           "id": "e1788522130247955",
           "label": "Vyloučení 2´",
           "amount": 20
+        }
+      ],
+      "we-2026-09-05": [
+        {
+          "id": "e1788773114513436",
+          "label": "Pozdní příchod na zápas",
+          "amount": 50
         }
       ]
     },
@@ -788,6 +804,13 @@ window.SAVED_DATA = {
           "label": "První gól v sezóně",
           "amount": 50
         }
+      ],
+      "we-2026-09-05": [
+        {
+          "id": "e1788773172661304",
+          "label": "Vyloučení 2´",
+          "amount": 20
+        }
       ]
     },
     "Janoušek Jakub": {
@@ -804,6 +827,13 @@ window.SAVED_DATA = {
           "label": "První gól v sezóně",
           "amount": 50
         }
+      ],
+      "we-2026-09-05": [
+        {
+          "id": "e178877296991192",
+          "label": "Pozdní přihlášení/odhlášení ze zápasu (do začátku úterního tréninku)",
+          "amount": 50
+        }
       ]
     },
     "Janoušek Šimon": {
@@ -817,6 +847,20 @@ window.SAVED_DATA = {
       "tr-2026-09-01": [
         {
           "id": "e1788522828396811",
+          "label": "Pozdní přihlášení/odhlášení ze zápasu (do začátku úterního tréninku)",
+          "amount": 50
+        }
+      ],
+      "tr-2026-09-04": [
+        {
+          "id": "e178877270047994",
+          "label": "Pozdní přihlášení/odhlášení z tréninku (půlnoc dne před tréninkem)",
+          "amount": 20
+        }
+      ],
+      "we-2026-09-05": [
+        {
+          "id": "e1788772974726886",
           "label": "Pozdní přihlášení/odhlášení ze zápasu (do začátku úterního tréninku)",
           "amount": 50
         }
@@ -849,6 +893,13 @@ window.SAVED_DATA = {
           "id": "e1788522843849293",
           "label": "Pozdní přihlášení/odhlášení ze zápasu (do začátku úterního tréninku)",
           "amount": 50
+        }
+      ],
+      "we-2026-09-05": [
+        {
+          "id": "e1788773645303651",
+          "label": "Nejlepší hráč zápasu",
+          "amount": 20
         }
       ]
     },
@@ -936,6 +987,13 @@ window.SAVED_DATA = {
           "label": "První asistence v letošní sezóně",
           "amount": 20
         }
+      ],
+      "tr-2026-09-04": [
+        {
+          "id": "e1788772768396233",
+          "label": "Pozdní přihlášení/odhlášení z tréninku (půlnoc dne před tréninkem)",
+          "amount": 20
+        }
       ]
     },
     "Špetlík Jan": {
@@ -957,6 +1015,15 @@ window.SAVED_DATA = {
         {
           "id": "e1788522664184909",
           "label": "První asistence v letošní sezóně",
+          "amount": 20
+        }
+      ]
+    },
+    "Mlejnek Mikuláš": {
+      "we-2026-09-05": [
+        {
+          "id": "e1788773601282832",
+          "label": "Každý sedmý obdržený gól v zápase (brankář)",
           "amount": 20
         }
       ]

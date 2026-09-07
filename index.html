@@ -21,6 +21,10 @@
     </label>
   </div>
   <p id="fileStatus" class="fileStatus"></p>
+  <p id="noServerWarning" class="noServerWarning" hidden>
+    ⚠ Appka neběží přes server, takže se nemůže ukládat automaticky do data.js.
+    Zavři tuhle záložku a spusť appku přes <code>start.sh</code> (ne dvojklikem na <code>index.html</code>).
+  </p>
 </header>
 
 <details class="priceList">
@@ -53,7 +57,7 @@
 </main>
 
 <p class="hint">Klikni na buňku pro přidání nebo odebrání pokuty z ceníku. Klikni na název sloupce pro úpravu, na &times; pro jeho smazání.</p>
-<p class="hint">Data žijí v souboru <code>data.js</code> vedle <code>index.html</code> v tomto repozitáři a při otevření se načtou automaticky. Spusť appku přes <code>start.sh</code> (ne dvojklikem na <code>index.html</code>) a klikni na &bdquo;Propojit data.js&ldquo; &ndash; pak se každá změna rovnou zapisuje do souboru na disku, bez stahování. (Funguje jen v Chrome/Edge/Chromium.) Po úpravách stačí <code>git commit</code>.</p>
+<p class="hint">Data žijí v souboru <code>data.js</code> vedle <code>index.html</code> v tomto repozitáři a při otevření se načtou automaticky. Spusť appku přes <code>start.sh</code> (ne dvojklikem na <code>index.html</code>) &ndash; každá změna se pak rovnou zapisuje do souboru na disku, bez stahování a bez klikání. Po úpravách stačí <code>git commit</code>.</p>
 
 <dialog id="cellFineDialog">
   <form method="dialog" class="dialogForm">

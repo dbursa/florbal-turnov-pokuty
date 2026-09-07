@@ -20,7 +20,9 @@ const DEFAULT_PLAYERS = [
   "Špetlík Jan",
   "Šťastný Jan",
   "Bulušek Štěpán",
-  "Jiránek Tomáš"
+  "Jiránek Tomáš",
+  "Mlejnek Mikuláš",
+  "Šafář Ondřej"
 ];
 
 const FINE_CATALOG = [
@@ -126,6 +128,7 @@ function loadData() {
 function saveData() {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
   markDirty();
+  writeToServer();
   writeToLinkedFile();
 }
 
@@ -138,6 +141,7 @@ const tableBody = document.getElementById("tableBody");
 const footerRow = document.getElementById("footerRow");
 const grandTotalEl = document.getElementById("grandTotal");
 const fileStatusEl = document.getElementById("fileStatus");
+const noServerWarningEl = document.getElementById("noServerWarning");
 const exportBtn = document.getElementById("exportBtn");
 const linkFileBtn = document.getElementById("linkFileBtn");
 const importLabel = document.getElementById("importLabel");
@@ -159,10 +163,22 @@ function markSaved(fileName) {
 }
 
 function updateFileStatus() {
+  if (serverSaveAvailable) {
+    linkFileBtn.hidden = true;
+    exportBtn.hidden = true;
+    importLabel.hidden = true;
+    noServerWarningEl.hidden = true;
+    fileStatusEl.textContent = hasUnsavedChanges
+      ? "Ukládám do data.js…"
+      : "✓ Ukládá se automaticky do data.js.";
+    return;
+  }
+
   if (linkedFileHandle) {
     linkFileBtn.hidden = true;
     exportBtn.hidden = true;
     importLabel.hidden = true;
+    noServerWarningEl.hidden = true;
     fileStatusEl.textContent = hasUnsavedChanges
       ? `Ukládám do „${linkedFileHandle.name}“…`
       : `✓ Propojeno s „${linkedFileHandle.name}“ – ukládá se automaticky, žádné stahování.`;
@@ -172,6 +188,7 @@ function updateFileStatus() {
   exportBtn.hidden = false;
   importLabel.hidden = false;
   linkFileBtn.hidden = !FS_SUPPORTED;
+  noServerWarningEl.hidden = !serverSaveChecked;
 
   if (hasUnsavedChanges) {
     exportBtn.textContent = "● Uložit data.js";
@@ -192,6 +209,57 @@ window.addEventListener("beforeunload", (e) => {
     e.returnValue = "";
   }
 });
+
+// ---- Přímý zápis do data.js přes lokální server (server.py spuštěný start.sh) ----
+// Funguje ve všech prohlížečích, dokud appka běží přes start.sh (ne přes file://).
+
+let serverSaveAvailable = false;
+let serverSaveChecked = false;
+
+async function checkServerSave() {
+  try {
+    const res = await fetch("/api/ping");
+    serverSaveAvailable = res.ok;
+  } catch (e) {
+    serverSaveAvailable = false;
+  }
+  serverSaveChecked = true;
+  updateFileStatus();
+}
+
+async function writeToServer() {
+  if (!serverSaveAvailable) return;
+  try {
+    const content = `window.SAVED_DATA = ${JSON.stringify(state, null, 2)};\n`;
+    const res = await fetch("/api/save", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ content }),
+      keepalive: true // dokončí zápis, i když stránku hned zavřeš/obnovíš
+    });
+    if (!res.ok) throw new Error("save failed");
+    hasUnsavedChanges = false;
+    updateFileStatus();
+    flashSaved();
+  } catch (e) {
+    console.warn("Zápis přes lokální server selhal, přepínám na ostatní způsoby ukládání.", e);
+    serverSaveAvailable = false;
+    updateFileStatus();
+  }
+}
+
+let flashSavedTimer = null;
+function flashSaved() {
+  clearTimeout(flashSavedTimer);
+  fileStatusEl.classList.remove("justSaved");
+  void fileStatusEl.offsetWidth; // reflow, aby animace naskočila i při rychlých opakovaných uloženích
+  fileStatusEl.textContent = "✓ Uloženo!";
+  fileStatusEl.classList.add("justSaved");
+  flashSavedTimer = setTimeout(() => {
+    fileStatusEl.classList.remove("justSaved");
+    updateFileStatus();
+  }, 1200);
+}
 
 // ---- Přímý zápis do data.js přes File System Access API ----
 // Funguje jen v zabezpečeném kontextu (http://localhost, ne file://) a jen
@@ -644,4 +712,5 @@ linkFileBtn.addEventListener("click", linkFile);
 
 render();
 updateFileStatus();
+checkServerSave();
 tryAutoLinkFile();

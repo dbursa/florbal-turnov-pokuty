@@ -12,10 +12,10 @@ Data jsou v [`data.js`](./data.js).
 Otevře appku na `http://localhost:8787` a rovnou ji spustí v prohlížeči.
 Zastavíš ji `Ctrl+C` v terminálu, kde `start.sh` běží.
 
-Pro automatické ukládání změn přímo do `data.js` (bez stahování) použij
-**Chrome, Edge nebo Chromium** a v appce klikni na **„🔗 Propojit data.js“**
-– v dialogu vyber soubor `data.js` v tomto adresáři. Firefox tuhle funkci
-nepodporuje, appka pak jen nabídne stažení souboru k ručnímu nahrazení.
+`start.sh` spouští `server.py` místo obyčejného `python3 -m http.server` –
+ten kromě servírování souborů umí i zapisovat změny rovnou do `data.js`.
+Appka tak ukládá automaticky v libovolném prohlížeči, bez stahování a bez
+ručního přetahování souboru.
 
 Po úpravách pokut nezapomeň:
 
