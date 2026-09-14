@@ -139,7 +139,9 @@ let state = loadData();
 const headerRow = document.getElementById("headerRow");
 const tableBody = document.getElementById("tableBody");
 const footerRow = document.getElementById("footerRow");
+const tableWrap = document.querySelector(".tableWrap");
 const grandTotalEl = document.getElementById("grandTotal");
+const grandPaidTotalEl = document.getElementById("grandPaidTotal");
 const fileStatusEl = document.getElementById("fileStatus");
 const noServerWarningEl = document.getElementById("noServerWarning");
 const exportBtn = document.getElementById("exportBtn");
@@ -368,6 +370,21 @@ function cellTotal(player, colId) {
   return getCellFines(player, colId).reduce((sum, f) => sum + f.amount, 0);
 }
 
+function cellIsFullyPaid(player, colId) {
+  const entries = getCellFines(player, colId);
+  return entries.length > 0 && entries.every(f => f.paid);
+}
+
+function playerPaidTotal(player) {
+  let sum = 0;
+  state.columns.forEach(col => {
+    getCellFines(player, col.id).forEach(f => {
+      if (f.paid) sum += f.amount;
+    });
+  });
+  return sum;
+}
+
 function newEntryId() {
   return "e" + Date.now() + Math.floor(Math.random() * 1000);
 }
@@ -383,6 +400,13 @@ function removeFineFromCell(player, colId, entryId) {
   if (!state.fines[player] || !state.fines[player][colId]) return;
   state.fines[player][colId] = state.fines[player][colId].filter(f => f.id !== entryId);
   if (state.fines[player][colId].length === 0) delete state.fines[player][colId];
+  saveData();
+}
+
+function toggleFinePaid(player, colId, entryId) {
+  const entry = getCellFines(player, colId).find(f => f.id === entryId);
+  if (!entry) return;
+  entry.paid = !entry.paid;
   saveData();
 }
 
@@ -435,7 +459,8 @@ function render() {
         ? entries.map(f => `${f.label} (${formatKc(f.amount)})`).join(", ")
         : "Kliknutím přidáš pokutu";
       const text = total ? formatKc(total) + (entries.length > 1 ? ` ×${entries.length}` : "") : "—";
-      td.innerHTML = `<button type="button" class="cellBtn${total ? " hasFine" : ""}" data-player="${escapeAttr(player)}" data-col="${col.id}" title="${escapeAttr(title)}">${text}</button>`;
+      const paidCellClass = cellIsFullyPaid(player, col.id) ? " paidCell" : "";
+      td.innerHTML = `<button type="button" class="cellBtn${total ? " hasFine" : ""}${paidCellClass}" data-player="${escapeAttr(player)}" data-col="${col.id}" title="${escapeAttr(title)}">${text}</button>`;
       tr.appendChild(td);
     });
 
@@ -443,6 +468,12 @@ function render() {
     totalTd.className = "rowTotal";
     totalTd.textContent = formatKc(rowSum);
     tr.appendChild(totalTd);
+
+    const paidTd = document.createElement("td");
+    const playerPaid = playerPaidTotal(player);
+    paidTd.className = "rowPaid" + (rowSum > 0 && playerPaid === rowSum ? " fullyPaid" : "");
+    paidTd.textContent = formatKc(playerPaid);
+    tr.appendChild(paidTd);
 
     tableBody.appendChild(tr);
   });
@@ -466,8 +497,37 @@ function render() {
 
   grandTotalEl.textContent = formatKc(grandTotal);
 
+  const grandPaidTotal = state.players.reduce((sum, player) => sum + playerPaidTotal(player), 0);
+  grandPaidTotalEl.textContent = formatKc(grandPaidTotal);
+
   attachEvents();
   renderPriceList();
+}
+
+function columnHasAnyData(colId) {
+  return state.players.some(player => getCellFines(player, colId).length > 0);
+}
+
+// Při načtení stránky odscrolluje tabulku tak, aby prvním viditelným sloupcem
+// (hned za fixním jménem) byl poslední sloupec, do kterého je něco zapsáno.
+function scrollToLastColumnWithData() {
+  if (!tableWrap) return;
+
+  let targetCol = null;
+  state.columns.forEach(col => {
+    if (columnHasAnyData(col.id)) targetCol = col;
+  });
+  if (!targetCol) return;
+
+  const input = headerRow.querySelector(`.colTitleInput[data-col="${targetCol.id}"]`);
+  const th = input && input.closest("th");
+  const nameCol = headerRow.querySelector(".nameCol");
+  if (!th || !nameCol) return;
+
+  // getBoundingClientRect meří skutečnou vykreslenou pozici (včetně rámečků
+  // tabulky a wrapperu), takže sloupec pak navazuje přesně na fixní jméno bez uříznutí.
+  const gap = th.getBoundingClientRect().left - nameCol.getBoundingClientRect().right;
+  tableWrap.scrollLeft += gap;
 }
 
 function colExtraClasses(col) {
@@ -565,12 +625,20 @@ function renderCellFinesList() {
     return;
   }
   container.innerHTML = entries.map(f => `
-    <div class="cellFineRow">
+    <div class="cellFineRow${f.paid ? " paidEntry" : ""}">
       <span class="cellFineLabel">${escapeHtml(f.label)}</span>
       <span class="cellFineAmount">${formatKc(f.amount)}</span>
+      <button type="button" class="paidToggleBtn${f.paid ? " isPaid" : ""}" data-entry="${f.id}">${f.paid ? "✓ Zaplaceno" : "Zaplaceno"}</button>
       <button type="button" class="removeFineBtn" data-entry="${f.id}" title="Odebrat">&times;</button>
     </div>
   `).join("");
+  container.querySelectorAll(".paidToggleBtn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      toggleFinePaid(currentCellPlayer, currentCellCol, btn.dataset.entry);
+      renderCellFinesList();
+      render();
+    });
+  });
   container.querySelectorAll(".removeFineBtn").forEach(btn => {
     btn.addEventListener("click", () => {
       removeFineFromCell(currentCellPlayer, currentCellCol, btn.dataset.entry);
@@ -714,3 +782,4 @@ render();
 updateFileStatus();
 checkServerSave();
 tryAutoLinkFile();
+requestAnimationFrame(scrollToLastColumnWithData);

@@ -182,13 +182,13 @@ window.SAVED_DATA = {
     },
     {
       "id": "tr-2026-09-01",
-      "label": "Trénink Út 1.9.",
+      "label": "Tr. 1.9.",
       "type": "training",
       "monthStart": true
     },
     {
       "id": "tr-2026-09-04",
-      "label": "Trénink Pá 4.9.",
+      "label": "Tr. 4.9.",
       "type": "training"
     },
     {
@@ -198,12 +198,12 @@ window.SAVED_DATA = {
     },
     {
       "id": "tr-2026-09-08",
-      "label": "Trénink Út 8.9.",
+      "label": "Tr. 8.9.",
       "type": "training"
     },
     {
       "id": "tr-2026-09-11",
-      "label": "Trénink Pá 11.9.",
+      "label": "Tr. 11.9.",
       "type": "training"
     },
     {
@@ -213,12 +213,12 @@ window.SAVED_DATA = {
     },
     {
       "id": "tr-2026-09-15",
-      "label": "Trénink Út 15.9.",
+      "label": "Tr. 15.9.",
       "type": "training"
     },
     {
       "id": "tr-2026-09-18",
-      "label": "Trénink Pá 18.9.",
+      "label": "Tr. 18.9.",
       "type": "training"
     },
     {
@@ -228,12 +228,12 @@ window.SAVED_DATA = {
     },
     {
       "id": "tr-2026-09-22",
-      "label": "Trénink Út 22.9.",
+      "label": "Tr. 22.9.",
       "type": "training"
     },
     {
       "id": "tr-2026-09-25",
-      "label": "Trénink Pá 25.9.",
+      "label": "Tr. 25.9.",
       "type": "training"
     },
     {
@@ -243,12 +243,12 @@ window.SAVED_DATA = {
     },
     {
       "id": "tr-2026-09-29",
-      "label": "Trénink Út 29.9.",
+      "label": "Tr. 29.9.",
       "type": "training"
     },
     {
       "id": "tr-2026-10-02",
-      "label": "Trénink Pá 2.10.",
+      "label": "Tr. 2.10.",
       "type": "training",
       "monthStart": true
     },
@@ -259,12 +259,12 @@ window.SAVED_DATA = {
     },
     {
       "id": "tr-2026-10-06",
-      "label": "Trénink Út 6.10.",
+      "label": "Tr. 6.10.",
       "type": "training"
     },
     {
       "id": "tr-2026-10-09",
-      "label": "Trénink Pá 9.10.",
+      "label": "Tr. 9.10.",
       "type": "training"
     },
     {
@@ -274,12 +274,12 @@ window.SAVED_DATA = {
     },
     {
       "id": "tr-2026-10-13",
-      "label": "Trénink Út 13.10.",
+      "label": "Tr. 13.10.",
       "type": "training"
     },
     {
       "id": "tr-2026-10-16",
-      "label": "Trénink Pá 16.10.",
+      "label": "Tr. 16.10.",
       "type": "training"
     },
     {
@@ -289,12 +289,12 @@ window.SAVED_DATA = {
     },
     {
       "id": "tr-2026-10-20",
-      "label": "Trénink Út 20.10.",
+      "label": "Tr. 20.10.",
       "type": "training"
     },
     {
       "id": "tr-2026-10-23",
-      "label": "Trénink Pá 23.10.",
+      "label": "Tr. 23.10.",
       "type": "training"
     },
     {
@@ -304,12 +304,12 @@ window.SAVED_DATA = {
     },
     {
       "id": "tr-2026-10-27",
-      "label": "Trénink Út 27.10.",
+      "label": "Tr. 27.10.",
       "type": "training"
     },
     {
       "id": "tr-2026-10-30",
-      "label": "Trénink Pá 30.10.",
+      "label": "Tr. 30.10.",
       "type": "training"
     },
     {
@@ -319,13 +319,13 @@ window.SAVED_DATA = {
     },
     {
       "id": "tr-2026-11-03",
-      "label": "Trénink Út 3.11.",
+      "label": "Tr. 3.11.",
       "type": "training",
       "monthStart": true
     },
     {
       "id": "tr-2026-11-06",
-      "label": "Trénink Pá 6.11.",
+      "label": "Tr. 6.11.",
       "type": "training"
     },
     {
@@ -335,12 +335,12 @@ window.SAVED_DATA = {
     },
     {
       "id": "tr-2026-11-10",
-      "label": "Trénink Út 10.11.",
+      "label": "Tr. 10.11.",
       "type": "training"
     },
     {
       "id": "tr-2026-11-13",
-      "label": "Trénink Pá 13.11.",
+      "label": "Tr. 13.11.",
       "type": "training"
     },
     {
@@ -350,12 +350,12 @@ window.SAVED_DATA = {
     },
     {
       "id": "tr-2026-11-17",
-      "label": "Trénink Út 17.11.",
+      "label": "Tr. 17.11.",
       "type": "training"
     },
     {
       "id": "tr-2026-11-20",
-      "label": "Trénink Pá 20.11.",
+      "label": "Tr. 20.11.",
       "type": "training"
     },
     {
@@ -365,12 +365,12 @@ window.SAVED_DATA = {
     },
     {
       "id": "tr-2026-11-24",
-      "label": "Trénink Út 24.11.",
+      "label": "Tr. 24.11.",
       "type": "training"
     },
     {
       "id": "tr-2026-11-27",
-      "label": "Trénink Pá 27.11.",
+      "label": "Tr. 27.11.",
       "type": "training"
     },
     {
@@ -380,13 +380,13 @@ window.SAVED_DATA = {
     },
     {
       "id": "tr-2026-12-01",
-      "label": "Trénink Út 1.12.",
+      "label": "Tr. 1.12.",
       "type": "training",
       "monthStart": true
     },
     {
       "id": "tr-2026-12-04",
-      "label": "Trénink Pá 4.12.",
+      "label": "Tr. 4.12.",
       "type": "training"
     },
     {
@@ -396,12 +396,12 @@ window.SAVED_DATA = {
     },
     {
       "id": "tr-2026-12-08",
-      "label": "Trénink Út 8.12.",
+      "label": "Tr. 8.12.",
       "type": "training"
     },
     {
       "id": "tr-2026-12-11",
-      "label": "Trénink Pá 11.12.",
+      "label": "Tr. 11.12.",
       "type": "training"
     },
     {
@@ -411,12 +411,12 @@ window.SAVED_DATA = {
     },
     {
       "id": "tr-2026-12-15",
-      "label": "Trénink Út 15.12.",
+      "label": "Tr. 15.12.",
       "type": "training"
     },
     {
       "id": "tr-2026-12-18",
-      "label": "Trénink Pá 18.12.",
+      "label": "Tr. 18.12.",
       "type": "training"
     },
     {
@@ -426,12 +426,12 @@ window.SAVED_DATA = {
     },
     {
       "id": "tr-2026-12-22",
-      "label": "Trénink Út 22.12.",
+      "label": "Tr. 22.12.",
       "type": "training"
     },
     {
       "id": "tr-2026-12-25",
-      "label": "Trénink Pá 25.12.",
+      "label": "Tr. 25.12.",
       "type": "training"
     },
     {
@@ -441,12 +441,12 @@ window.SAVED_DATA = {
     },
     {
       "id": "tr-2026-12-29",
-      "label": "Trénink Út 29.12.",
+      "label": "Tr. 29.12.",
       "type": "training"
     },
     {
       "id": "tr-2027-01-01",
-      "label": "Trénink Pá 1.1.",
+      "label": "Tr. 1.1.",
       "type": "training",
       "monthStart": true
     },
@@ -457,12 +457,12 @@ window.SAVED_DATA = {
     },
     {
       "id": "tr-2027-01-05",
-      "label": "Trénink Út 5.1.",
+      "label": "Tr. 5.1.",
       "type": "training"
     },
     {
       "id": "tr-2027-01-08",
-      "label": "Trénink Pá 8.1.",
+      "label": "Tr. 8.1.",
       "type": "training"
     },
     {
@@ -472,12 +472,12 @@ window.SAVED_DATA = {
     },
     {
       "id": "tr-2027-01-12",
-      "label": "Trénink Út 12.1.",
+      "label": "Tr. 12.1.",
       "type": "training"
     },
     {
       "id": "tr-2027-01-15",
-      "label": "Trénink Pá 15.1.",
+      "label": "Tr. 15.1.",
       "type": "training"
     },
     {
@@ -487,12 +487,12 @@ window.SAVED_DATA = {
     },
     {
       "id": "tr-2027-01-19",
-      "label": "Trénink Út 19.1.",
+      "label": "Tr. 19.1.",
       "type": "training"
     },
     {
       "id": "tr-2027-01-22",
-      "label": "Trénink Pá 22.1.",
+      "label": "Tr. 22.1.",
       "type": "training"
     },
     {
@@ -502,12 +502,12 @@ window.SAVED_DATA = {
     },
     {
       "id": "tr-2027-01-26",
-      "label": "Trénink Út 26.1.",
+      "label": "Tr. 26.1.",
       "type": "training"
     },
     {
       "id": "tr-2027-01-29",
-      "label": "Trénink Pá 29.1.",
+      "label": "Tr. 29.1.",
       "type": "training"
     },
     {
@@ -517,13 +517,13 @@ window.SAVED_DATA = {
     },
     {
       "id": "tr-2027-02-02",
-      "label": "Trénink Út 2.2.",
+      "label": "Tr. 2.2.",
       "type": "training",
       "monthStart": true
     },
     {
       "id": "tr-2027-02-05",
-      "label": "Trénink Pá 5.2.",
+      "label": "Tr. 5.2.",
       "type": "training"
     },
     {
@@ -533,12 +533,12 @@ window.SAVED_DATA = {
     },
     {
       "id": "tr-2027-02-09",
-      "label": "Trénink Út 9.2.",
+      "label": "Tr. 9.2.",
       "type": "training"
     },
     {
       "id": "tr-2027-02-12",
-      "label": "Trénink Pá 12.2.",
+      "label": "Tr. 12.2.",
       "type": "training"
     },
     {
@@ -548,12 +548,12 @@ window.SAVED_DATA = {
     },
     {
       "id": "tr-2027-02-16",
-      "label": "Trénink Út 16.2.",
+      "label": "Tr. 16.2.",
       "type": "training"
     },
     {
       "id": "tr-2027-02-19",
-      "label": "Trénink Pá 19.2.",
+      "label": "Tr. 19.2.",
       "type": "training"
     },
     {
@@ -563,12 +563,12 @@ window.SAVED_DATA = {
     },
     {
       "id": "tr-2027-02-23",
-      "label": "Trénink Út 23.2.",
+      "label": "Tr. 23.2.",
       "type": "training"
     },
     {
       "id": "tr-2027-02-26",
-      "label": "Trénink Pá 26.2.",
+      "label": "Tr. 26.2.",
       "type": "training"
     },
     {
@@ -578,13 +578,13 @@ window.SAVED_DATA = {
     },
     {
       "id": "tr-2027-03-02",
-      "label": "Trénink Út 2.3.",
+      "label": "Tr. 2.3.",
       "type": "training",
       "monthStart": true
     },
     {
       "id": "tr-2027-03-05",
-      "label": "Trénink Pá 5.3.",
+      "label": "Tr. 5.3.",
       "type": "training"
     },
     {
@@ -594,12 +594,12 @@ window.SAVED_DATA = {
     },
     {
       "id": "tr-2027-03-09",
-      "label": "Trénink Út 9.3.",
+      "label": "Tr. 9.3.",
       "type": "training"
     },
     {
       "id": "tr-2027-03-12",
-      "label": "Trénink Pá 12.3.",
+      "label": "Tr. 12.3.",
       "type": "training"
     },
     {
@@ -609,12 +609,12 @@ window.SAVED_DATA = {
     },
     {
       "id": "tr-2027-03-16",
-      "label": "Trénink Út 16.3.",
+      "label": "Tr. 16.3.",
       "type": "training"
     },
     {
       "id": "tr-2027-03-19",
-      "label": "Trénink Pá 19.3.",
+      "label": "Tr. 19.3.",
       "type": "training"
     },
     {
@@ -624,12 +624,12 @@ window.SAVED_DATA = {
     },
     {
       "id": "tr-2027-03-23",
-      "label": "Trénink Út 23.3.",
+      "label": "Tr. 23.3.",
       "type": "training"
     },
     {
       "id": "tr-2027-03-26",
-      "label": "Trénink Pá 26.3.",
+      "label": "Tr. 26.3.",
       "type": "training"
     },
     {
@@ -639,12 +639,12 @@ window.SAVED_DATA = {
     },
     {
       "id": "tr-2027-03-30",
-      "label": "Trénink Út 30.3.",
+      "label": "Tr. 30.3.",
       "type": "training"
     },
     {
       "id": "tr-2027-04-02",
-      "label": "Trénink Pá 2.4.",
+      "label": "Tr. 2.4.",
       "type": "training",
       "monthStart": true
     },
@@ -655,12 +655,12 @@ window.SAVED_DATA = {
     },
     {
       "id": "tr-2027-04-06",
-      "label": "Trénink Út 6.4.",
+      "label": "Tr. 6.4.",
       "type": "training"
     },
     {
       "id": "tr-2027-04-09",
-      "label": "Trénink Pá 9.4.",
+      "label": "Tr. 9.4.",
       "type": "training"
     },
     {
@@ -670,12 +670,12 @@ window.SAVED_DATA = {
     },
     {
       "id": "tr-2027-04-13",
-      "label": "Trénink Út 13.4.",
+      "label": "Tr. 13.4.",
       "type": "training"
     },
     {
       "id": "tr-2027-04-16",
-      "label": "Trénink Pá 16.4.",
+      "label": "Tr. 16.4.",
       "type": "training"
     },
     {
@@ -685,12 +685,12 @@ window.SAVED_DATA = {
     },
     {
       "id": "tr-2027-04-20",
-      "label": "Trénink Út 20.4.",
+      "label": "Tr. 20.4.",
       "type": "training"
     },
     {
       "id": "tr-2027-04-23",
-      "label": "Trénink Pá 23.4.",
+      "label": "Tr. 23.4.",
       "type": "training"
     },
     {
@@ -700,12 +700,12 @@ window.SAVED_DATA = {
     },
     {
       "id": "tr-2027-04-27",
-      "label": "Trénink Út 27.4.",
+      "label": "Tr. 27.4.",
       "type": "training"
     },
     {
       "id": "tr-2027-04-30",
-      "label": "Trénink Pá 30.4.",
+      "label": "Tr. 30.4.",
       "type": "training"
     }
   ],
@@ -715,12 +715,21 @@ window.SAVED_DATA = {
         {
           "id": "e1788522019582976",
           "label": "První asistence v letošní sezóně",
-          "amount": 20
+          "amount": 20,
+          "paid": true
         }
       ],
       "we-2026-09-05": [
         {
           "id": "e1788773102631353",
+          "label": "Vyloučení 2´",
+          "amount": 20,
+          "paid": true
+        }
+      ],
+      "we-2026-09-12": [
+        {
+          "id": "e1789379280470687",
           "label": "Vyloučení 2´",
           "amount": 20
         }
@@ -776,6 +785,23 @@ window.SAVED_DATA = {
           "label": "První asistence v letošní sezóně",
           "amount": 20
         }
+      ],
+      "we-2026-09-12": [
+        {
+          "id": "e1789379299687407",
+          "label": "Zapomenuté štulpny/ponožky v barvě (pokud se nekřekne jinak, tak v černé)",
+          "amount": 20
+        },
+        {
+          "id": "e1789379529995117",
+          "label": "První gól v sezóně",
+          "amount": 50
+        },
+        {
+          "id": "e1789379626673930",
+          "label": "Nejlepší hráč zápasu",
+          "amount": 20
+        }
       ]
     },
     "Honzák Matouš": {
@@ -783,12 +809,14 @@ window.SAVED_DATA = {
         {
           "id": "e1788522204808919",
           "label": "První asistence v letošní sezóně",
-          "amount": 20
+          "amount": 20,
+          "paid": true
         },
         {
           "id": "e178852220640458",
           "label": "První gól v sezóně",
-          "amount": 50
+          "amount": 50,
+          "paid": true
         }
       ]
     },
@@ -834,6 +862,13 @@ window.SAVED_DATA = {
           "label": "Pozdní přihlášení/odhlášení ze zápasu (do začátku úterního tréninku)",
           "amount": 50
         }
+      ],
+      "we-2026-09-12": [
+        {
+          "id": "e1789379338570531",
+          "label": "Pozdní příchod na zápas",
+          "amount": 50
+        }
       ]
     },
     "Janoušek Šimon": {
@@ -864,6 +899,13 @@ window.SAVED_DATA = {
           "label": "Pozdní přihlášení/odhlášení ze zápasu (do začátku úterního tréninku)",
           "amount": 50
         }
+      ],
+      "we-2026-09-12": [
+        {
+          "id": "e1789379349107618",
+          "label": "Pozdní příchod na zápas",
+          "amount": 50
+        }
       ]
     },
     "Kořínek Viktor": {
@@ -871,7 +913,8 @@ window.SAVED_DATA = {
         {
           "id": "e1788522345520291",
           "label": "První gól v sezóně",
-          "amount": 50
+          "amount": 50,
+          "paid": true
         }
       ]
     },
@@ -927,21 +970,24 @@ window.SAVED_DATA = {
         {
           "id": "e1788522418494736",
           "label": "První asistence v letošní sezóně",
-          "amount": 20
+          "amount": 20,
+          "paid": true
         }
       ],
       "we-2026-08-29": [
         {
           "id": "e178852242233892",
           "label": "První gól v sezóně",
-          "amount": 50
+          "amount": 50,
+          "paid": true
         }
       ],
       "tr-2026-09-01": [
         {
           "id": "e1788522856637138",
           "label": "Pozdní přihlášení/odhlášení ze zápasu (do začátku úterního tréninku)",
-          "amount": 50
+          "amount": 50,
+          "paid": true
         }
       ]
     },
@@ -978,6 +1024,23 @@ window.SAVED_DATA = {
           "label": "První gól v sezóně",
           "amount": 50
         }
+      ],
+      "we-2026-09-12": [
+        {
+          "id": "e1789379309871543",
+          "label": "Zapomenuté štulpny/ponožky v barvě (pokud se nekřekne jinak, tak v černé)",
+          "amount": 20
+        },
+        {
+          "id": "e1789379364419495",
+          "label": "Pozdní příchod na zápas",
+          "amount": 50
+        },
+        {
+          "id": "e1789379504846460",
+          "label": "První asistence v letošní sezóně",
+          "amount": 20
+        }
       ]
     },
     "Šmída Ondřej": {
@@ -993,6 +1056,27 @@ window.SAVED_DATA = {
           "id": "e1788772768396233",
           "label": "Pozdní přihlášení/odhlášení z tréninku (půlnoc dne před tréninkem)",
           "amount": 20
+        }
+      ],
+      "tr-2026-09-11": [
+        {
+          "id": "e1789116777440283",
+          "label": "Pozdní přihlášení/odhlášení z tréninku (půlnoc dne před tréninkem)",
+          "amount": 20
+        }
+      ],
+      "tr-2026-09-08": [
+        {
+          "id": "e1789116927409444",
+          "label": "Pozdní přihlášení/odhlášení ze zápasu (do začátku úterního tréninku)",
+          "amount": 50
+        }
+      ],
+      "we-2026-09-12": [
+        {
+          "id": "e1789379376879917",
+          "label": "Pozdní příchod na zápas",
+          "amount": 50
         }
       ]
     },
@@ -1023,6 +1107,16 @@ window.SAVED_DATA = {
       "we-2026-09-05": [
         {
           "id": "e1788773601282832",
+          "label": "Každý sedmý obdržený gól v zápase (brankář)",
+          "amount": 20,
+          "paid": true
+        }
+      ]
+    },
+    "Šafář Ondřej": {
+      "we-2026-09-12": [
+        {
+          "id": "e1789379639667414",
           "label": "Každý sedmý obdržený gól v zápase (brankář)",
           "amount": 20
         }

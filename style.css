@@ -183,6 +183,36 @@ dialog#addFineDialog::backdrop, dialog#cellFineDialog::backdrop {
   color: #b3261e;
 }
 
+.cellFineRow.paidEntry {
+  background: #eafbee;
+  border-color: #bfe8c8;
+}
+
+.cellFineRow.paidEntry .cellFineAmount {
+  color: #1c7c34;
+}
+
+.paidToggleBtn {
+  border: 1px solid #bfe8c8;
+  background: #fff;
+  color: #1c7c34;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.paidToggleBtn:hover {
+  background: #eafbee;
+}
+
+.paidToggleBtn.isPaid {
+  background: #1c7c34;
+  border-color: #1c7c34;
+  color: #fff;
+}
+
 .removeFineBtn {
   border: none;
   background: transparent;
@@ -326,7 +356,7 @@ thead th {
   padding: 8px 12px !important;
 }
 
-thead th.cornerCell {
+.cornerCell {
   z-index: 20;
 }
 
@@ -428,18 +458,42 @@ th.monthStart, td.amountCell.monthStart {
   font-weight: 600;
 }
 
-.rowTotal, .totalCol {
+.cellBtn.paidCell {
+  background: #dff5e3;
+  color: #1c7c34;
+}
+
+.cellBtn.paidCell:hover {
+  background: #cdedd4;
+}
+
+.rowTotal, .totalCol, .rowPaid, .paidCol {
   position: sticky;
-  right: 0;
   background: #eef0f3;
   font-weight: 600;
   text-align: center;
   padding: 8px 10px !important;
   z-index: 4;
+  min-width: 96px;
 }
 
-thead .totalCol, tfoot .totalCol {
+.rowTotal, .totalCol {
+  right: 96px;
+}
+
+.rowPaid, .paidCol {
+  right: 0;
+  background: #eafbee;
+  color: #1c7c34;
+}
+
+thead .totalCol, tfoot .totalCol, thead .paidCol, tfoot .paidCol {
   z-index: 20;
+}
+
+.rowPaid.fullyPaid {
+  background: #b8ecc4;
+  font-weight: 700;
 }
 
 .colSum {
